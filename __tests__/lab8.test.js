@@ -175,10 +175,9 @@ describe('Basic user flow for SPA ', () => {
   });
 
   // create your own test 19
-  it('Test19: test  back then forward, should get entry3', async () => {
+  it('Test19: test  back then forward to entry3', async () => {
     await page.goBack();
     expect(page.url()).toMatch('http://127.0.0.1:5500/');
-
     await page.goForward();
     expect(page.url()).toContain('/#entry3');
 
