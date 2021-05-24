@@ -102,14 +102,14 @@ describe('Basic user flow for SPA ', () => {
   });
 
   // define and implement test11: Clicking the back button once should bring the user back to the home page
-  it('Clicking the back button once should bring the user back to the home page', async()=> {
+  it('Test11:Clicking the back button once should bring the user back to the home page', async()=> {
     await page.goBack();
     expect(page.url()).toMatch('http://127.0.0.1:5500/');
   });
 
 
   // define and implement test12: When the user if on the homepage, the header title should be “Journal Entries”
-  it(' If the user is on the homepage, the header title should be “Journal Entries”', async()=> {
+  it('Test:12 If the user is on the homepage, the header title should be “Journal Entries”', async()=> {
     const title = await page.$eval('header > h1', header => header.innerText);
     expect(title).toEqual('Journal Entries');
   });
